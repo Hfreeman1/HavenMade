@@ -689,3 +689,162 @@ a:focus-visible {
   font-size: 14px;
   overflow-wrap: anywhere;
 }
+
+/* HavenMade Recipe Recommendation Engine */
+
+.recommendation-section {
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+
+.recommendation-tool {
+  max-width: 850px;
+  margin: 30px auto 0;
+  padding: 35px;
+  background: #fff5ed;
+  border: 2px solid #e9b9bd;
+  border-radius: 26px;
+  box-shadow: 0 10px 25px rgba(70, 40, 35, 0.08);
+}
+
+.recommendation-question {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.recommendation-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* Keep the radio buttons keyboard-accessible */
+.recommendation-options input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.recommendation-options label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 65px;
+  padding: 12px;
+  background: #fff;
+  border: 2px solid #e7c8c3;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.recommendation-options label:hover {
+  transform: translateY(-3px);
+  background: #ffe4e8;
+}
+
+.recommendation-options input:checked + label {
+  background: #f7cdd5;
+  border-color: #a65c6b;
+}
+
+.recommendation-options input:focus-visible + label {
+  outline: 3px solid #71445b;
+  outline-offset: 3px;
+}
+
+.recommendation-results {
+  grid-column: 1 / -1;
+  margin-top: 15px;
+}
+
+.recommendation-result {
+  display: none;
+  padding: 28px;
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #ecd7cc;
+  animation: recommendation-appear 0.35s ease;
+}
+
+.recommendation-result h3 {
+  margin: 14px 0 10px;
+  font-size: 1.6rem;
+}
+
+.recommendation-result p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.recommendation-confidence {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 30px;
+  background: #e5efdb;
+  color: #365b32;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* CSS-only recommendation switching */
+.recommendation-options:has(#mood-budget:checked) .result-budget,
+.recommendation-options:has(#mood-quick:checked) .result-quick,
+.recommendation-options:has(#mood-cozy:checked) .result-cozy,
+.recommendation-options:has(#mood-sweet:checked) .result-sweet {
+  display: block;
+}
+
+.recommendation-note {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+@keyframes recommendation-appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .recommendation-tool {
+    padding: 20px;
+  }
+
+  .recommendation-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .recommendation-result {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .recommendation-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recommendation-options label,
+  .recommendation-result {
+    animation: none;
+    transition: none;
+  }
+}

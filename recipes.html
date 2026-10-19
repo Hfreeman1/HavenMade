@@ -133,6 +133,102 @@
         </div>
       </section>
 
+      <!-- HavenMade Recipe Recommendation Engine -->
+      <section
+        class="section-container recommendation-section"
+        aria-labelledby="recommendation-title">
+        <div class="section-heading">
+          <p class="eyebrow">✿ Your cozy kitchen companion ✿</p>
+          <h2 id="recommendation-title">What should I cook today? ♡</h2>
+          <p>
+            Tell HavenMade what you're in the mood for, and find your next happy
+            meal.
+          </p>
+        </div>
+
+        <div class="recommendation-tool">
+          <p class="recommendation-question">What's your kitchen mood?</p>
+
+          <div class="recommendation-options">
+            <input type="radio" name="kitchen-mood" id="mood-budget" checked />
+            <label for="mood-budget">💸 On a budget</label>
+
+            <input type="radio" name="kitchen-mood" id="mood-quick" />
+            <label for="mood-quick">⏰ Something quick</label>
+
+            <input type="radio" name="kitchen-mood" id="mood-cozy" />
+            <label for="mood-cozy">☁️ Comfort food</label>
+
+            <input type="radio" name="kitchen-mood" id="mood-sweet" />
+            <label for="mood-sweet">🍯 Something sweet</label>
+
+            <div class="recommendation-results" aria-live="polite">
+              <article class="recommendation-result result-budget">
+                <span class="recommendation-confidence"
+                  >High match · Budget-friendly</span
+                >
+                <h3>Chicken Noodle Soup 🍲</h3>
+                <p>
+                  A cozy meal made with everyday ingredients. Make a big batch
+                  and enjoy the leftovers!
+                </p>
+                <a
+                  href="recipe-detail.html#chicken-soup"
+                  class="btn btn-primary"
+                  >Let's Cook →</a
+                >
+              </article>
+
+              <article class="recommendation-result result-quick">
+                <span class="recommendation-confidence"
+                  >High match · Easy dinner</span
+                >
+                <h3>BBQ Chicken Flatbread Pizza 🍕</h3>
+                <p>
+                  Perfect when you want something delicious without spending all
+                  evening in the kitchen.
+                </p>
+                <a href="recipe-detail.html#pizza" class="btn btn-primary"
+                  >Let's Cook →</a
+                >
+              </article>
+
+              <article class="recommendation-result result-cozy">
+                <span class="recommendation-confidence"
+                  >High match · Comfort food</span
+                >
+                <h3>Homestyle Chili 🥣</h3>
+                <p>
+                  Hearty, filling, and just right for a slow evening at home.
+                </p>
+                <a href="recipe-detail.html#chili" class="btn btn-primary"
+                  >Let's Cook →</a
+                >
+              </article>
+
+              <article class="recommendation-result result-sweet">
+                <span class="recommendation-confidence"
+                  >Suggested match · Sweet & cozy</span
+                >
+                <h3>Sweet Golden Cornbread 🍯</h3>
+                <p>
+                  Soft, buttery, and a little sweet. A simple treat that feels
+                  homemade in the best way.
+                </p>
+                <a href="recipe-detail.html#cornbread" class="btn btn-primary"
+                  >Let's Cook →</a
+                >
+              </article>
+            </div>
+          </div>
+
+          <p class="recommendation-note">
+            ♡ HavenMade's recipe matches are simulated suggestions based on your
+            selected mood, not live AI predictions.
+          </p>
+        </div>
+      </section>
+
       <section class="comfort-banner">
         <div class="section-container">
           <p class="eyebrow">✿ A little reminder ✿</p>

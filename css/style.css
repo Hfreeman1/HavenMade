@@ -550,3 +550,108 @@ a:focus-visible {
     padding: 20px;
   }
 }
+
+/* Our Story page */
+.about-hero {
+  text-align: center;
+  padding-bottom: 40px;
+  animation: fade-in-up 0.8s ease both;
+}
+
+.about-hero h1 {
+  color: var(--rose);
+  font-size: clamp(40px, 6vw, 70px);
+  margin: 15px 0;
+}
+
+.about-subtitle {
+  max-width: 650px;
+  margin: auto;
+  font-size: 19px;
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 65px;
+  align-items: center;
+  padding-top: 35px;
+}
+
+.about-story-image {
+  padding: 12px;
+  border: 3px solid var(--cocoa);
+  border-radius: 30px;
+  background: var(--pink);
+  box-shadow: 12px 12px 0 var(--butter);
+  transform: rotate(-2deg);
+}
+
+.about-story-image img {
+  height: 430px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.about-story-text h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  margin: 18px 0;
+}
+
+.about-story-text p {
+  font-size: 17px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.value-card {
+  padding: 35px 25px;
+  border: 2px solid var(--cocoa);
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 5px 5px 0 var(--cocoa);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-7px) rotate(1deg);
+}
+
+.value-pink {
+  background: var(--pink);
+}
+
+.value-yellow {
+  background: var(--butter);
+}
+
+.value-green {
+  background: var(--sage);
+}
+
+.value-icon {
+  font-size: 45px;
+}
+
+.value-card h3 {
+  font-size: 25px;
+}
+
+@media (max-width: 800px) {
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-story-image img {
+    height: 330px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
